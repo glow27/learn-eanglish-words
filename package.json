@@ -1,0 +1,39 @@
+{
+  "name": "solo-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glow27/learn-eanglish-words.git"
+  },
+  "keywords": [],
+  "author": "glow27",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glow27/learn-eanglish-words/issues"
+  },
+  "homepage": "https://github.com/glow27/learn-eanglish-words#readme",
+  "dependencies": {
+    "@google-cloud/translate": "^6.0.2",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.2",
+    "owlbot-js": "^2.0.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}

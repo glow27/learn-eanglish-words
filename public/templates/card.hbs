@@ -1,0 +1,30 @@
+<div class="container" style="height: 50px;"></div>
+
+<div class="row">
+          <span class="card-title"><h2>word: <b>{{this.word}}</b> </h2></span>
+          <span class="card-title"><h3>pronunciation: <i>{{this.word}} </i> </h3></span>
+        </div>
+
+{{#each definitions}}
+
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          
+          <img src={{image_url}}>
+         
+        </div>
+        
+        <div class="card-content">
+          <p><b>type:</b> {{type}}</p>
+          <p><b>definition:</b> {{definition}}</p>
+          <p><b>example:</b> {{example}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Add to your lsit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    {{/each}}         

@@ -1,0 +1,15 @@
+<nav>
+    <div class="nav-wrapper green">
+      <a  style="margin-left: 50px;" href="/">Home</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right: 50px;">
+        {{#if name}}
+        <li style="margin-right: 30px;"><h4>Hello, {{name}}</h4></li>
+        <li><a href="/party">Add new party</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
+        <li><a href="/login/new">Register</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
