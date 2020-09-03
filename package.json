@@ -20,6 +20,7 @@
   "homepage": "https://github.com/glow27/learn-eanglish-words#readme",
   "dependencies": {
     "@google-cloud/translate": "^6.0.2",
+    "axios": "^0.20.0",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
