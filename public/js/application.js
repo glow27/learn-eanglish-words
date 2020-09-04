@@ -1,6 +1,5 @@
 const form = document.querySelector('form');
 const show = document.querySelector('.show');
-const btn = document.querySelector('.sound');
 
 // hbs on client
 const cardTempale = async () => {
@@ -23,6 +22,20 @@ const cardTempale = async () => {
   }
 };
 
+const difficultWordTempale = async () => {
+  try {
+    const response = await fetch('/templates/bad-word.hbs');
+    if (response.status === 404) {
+      throw Error('smth went wrong'); // throw to catch block
+    }
+    const result = await response.text(); // get hbs as text
+    return Handlebars.compile(result);
+  } catch (error) {
+    console.log(error);
+    return Handlebars.compile('<strong>We have some problems</strong>');
+  }
+};
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -35,37 +48,38 @@ form.addEventListener('submit', async (e) => {
   if (response.status === 404) {
     return (show.innerHTML = '<h1>Are you sure? Try again...</h1>');
   }
-  const template = await cardTempale();
+
   const result = await response.json();
 
-  const audioRespons = await fetch(
-    `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${result.word}`,
-    {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'lingua-robot.p.rapidapi.com',
-        'x-rapidapi-key': '6af9db4afcmshe6cbf70837c034cp15045bjsn5ebe0d1762f2',
-      },
+  if (result.word) {
+    const template = await cardTempale();
+    const audioRespons = await fetch(
+      `https://lingua-robot.p.rapidapi.com/language/v1/entries/en/${result.word}`,
+      {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'lingua-robot.p.rapidapi.com',
+          'x-rapidapi-key':
+            '6af9db4afcmshe6cbf70837c034cp15045bjsn5ebe0d1762f2',
+        },
+      }
+    );
+
+    const sound = await audioRespons.json();
+
+    let audio;
+    if (sound.entries[0].pronunciations[0].audio) {
+      audio = sound.entries[0].pronunciations[0].audio.url;
+    } else {
+      audio = sound.entries[0].pronunciations[1].audio.url;
     }
-  );
+    if (audio) {
+      result.audio = audio;
+    }
 
-  const sound = await audioRespons.json();
-
-  let audio;
-  if (sound.entries[0].pronunciations[0].audio) {
-    audio = sound.entries[0].pronunciations[0].audio.url;
+    show.innerHTML = template(result);
   } else {
-    audio = sound.entries[0].pronunciations[1].audio.url;
+    const template = await difficultWordTempale();
+    show.innerHTML = template({ result });
   }
-  if (audio) {
-    result.audio = audio;
-  }
-
-  show.innerHTML = template(result);
 });
-
-//   console.log(btn)
-// btn.addEventListener('click', async (e) => {
-//   e.preventDefault();
-//   console.log(e.target.href)
-// })

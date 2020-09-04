@@ -7,11 +7,18 @@ const router = express.Router();
 router.post('/', async (req, res) => {
   const wordToTranslate = await translator(req.body.word);
 
-  const word = await owlClient.define(wordToTranslate);
-  if (word.word) {
-    return res.json(word);
+  try {
+    const word = await owlClient.define(wordToTranslate);
+    if (word.word) {
+      return res.json(word);
+    }
+    res.status(404).send();
+
+  } catch {
+    return res.json(wordToTranslate);
   }
-  res.status(404).send();
+
+  
 });
 
 module.exports = router;

@@ -15,7 +15,21 @@
 </head>
 
 <body>
-  {{> _header}}
+  <nav>
+    <div class="nav-wrapper green">
+      <a  style="margin-left: 50px;" href="/"><b> HOME</b></a>
+      <ul id="nav-mobile" class="right" style="margin-right: 50px;">
+        {{#if name}}
+        <li style="font-size:large; margin-right: 30px;"> Hello, {{name}}!</li>
+        <li><a href="/profile"><b>YOUR WORDS</b> </a></li>
+        <li><a href="/auth/logout"><b> LOG OUT</b></a></li>
+        {{else}}
+        <li><a href="/auth">Login</a></li>
+        
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
   <div class="container">
     {{{body}}}
 
