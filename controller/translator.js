@@ -2,7 +2,7 @@ const { Translate } = require('@google-cloud/translate').v2;
 // GOOGLE_APPLICATION_CREDENTIALS="/home/patric/Downloads/My Project 1-741f03f22385.json";
 
 const translate = new Translate({
-  keyFilename: '/home/patric/Downloads/My Project 1-741f03f22385.json', //eg my-project-0fwewexyz.json
+  keyFilename: './config/My Project 1-741f03f22385.json', //eg my-project-0fwewexyz.json
 });
 
 // const text = 'Hello, world!';

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dogwood-reef-288406",
+  "private_key_id": "741f03f22385506063c35424dbb23bab5da0ab3b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC5g5PjQSLJC9sY\n2h3m8WjFPh0yzA7TLZAy7xgXd0euEo0+H+ogZ+lttlU6Lqrjg8gG8vYNaTkrhZ7M\nvILB9fZrq7WllEdNNTvplfUag2ZdmIJRmSw2KdZBxgKFEvWbZKL0a5dH39s7dt76\n5BkIn+YphHlYWKwMsIlZxkXgK3sozzyyywu9IBDF2hbQNLOl1CwvaOZJ5RcSrkaz\n4tu4PeTy2KO+zsK/4T4JUHRCuaWDwHJOKKxY3yOXmJlMsJFPxzlescfpFW/Eb14I\nJTy1o+5Dl4CYJz2cCn+mn1K7gulUE1j7QCUB3Mwp4FfU5ZBv6vOtZa861cwMJKvv\nKsAQsbzfAgMBAAECggEAEtbtbF0/ippFIFN6SOtIQAusTG3TrZeJdtq4IB3xbhid\nNmtoS+0xk/45zoRRv3QxGp+O5FLExwo1U8ZrIwZ3BX01H8EcspcO5AxiDVS9zxB/\nX4kGJ+P8ycYxmFESFztTny3T+a0epv3N7D3A2xLd/WZiKloq8sj00eSkUP0pbz3c\nI74YAVIamvxEjtYT6CsXTqsMz0mKtypabbour0J+2uvBkwTsZ9VPH4XFGhlS0oW4\nxM/SHMFpWDtMjLmwAxZC2Ud98SIyt/rZmZF0baQaQMIJ1UPHy8BY0sFUop9qgNDQ\n7IESUvTSbHbpVCX+OrFJiEZVch3gSTfZ8R6HFDdERQKBgQDqRel/p8nF+XJy68G2\niMIQUF+XZqq3B5NOc1gd5SbayOVcQ23SZvqEmvd5FVxQgxxpvPYLTshjOgHte6Vh\nAYGlbBGCKmD0DRzV4egF3ZWxknBLb0A8qMJl6Nnr9h6tzDzfBTRV4O3uoIwHRzIV\npzZxCCr4G9nIsNNXpP9gfv57+wKBgQDKuAgUO0JBS1ejKFVrYbD8tIAMdz6u3kW9\nEk2uv62CFHaxcNvV6Y7G8EPqxvS2Oi6NSZLU3gbmdYbylxaB4NR5ylc4UOclh5rI\nwOcI6evQxCS0NyE8jLrgIwrBzIZTj91VReEU69i26Do5ePnCQ1Q+lIp7aCt7YZ7e\nDRu62udpbQKBgEv0XsAEpmaJeZHI3gVQUZr4dAWiQ7cTva6xtt/6a56Dg9lmAzU0\nLgTQOWwIgOWZnJyrpxoDcPS62eUlMXlCA8aeQw7wrn5xweeWVqOQM/heggnzB+Ci\n1mQ0GnNmWIwAq7ui9FTjmEDFzKCPdK2QiRYcj9HhNbrbmanQ1Pt0MQ4BAoGAOCtb\n2bc9uXfV1ZiEapeMAclFva6AyNU/v47FxYjI28Utyia6UwA/FnJWb0QnZCKk6XMc\nYy0N/mdMOAWTL/OLDB/7oNgR4/057yw8F+Uw+QyQGvs3k15vHVG4VlCEW7z+F/Wf\n0zsyNiQMlgYmNiSPwDNKV71aZvp6mY5KQ7EJ89UCgYEA464Kyyb69+AicVZhvaeC\nw5NEq9K1UYkdzYOk2hjAaARyfwouN6jgky6mmmWu+ZM0YKO31br3SXhDUxOElqSX\nQEXvm1xiQc1Yi4h9IXHZTbeUorJ0axHt8axO+0sfIUqFvcZtsNurNjbz0PIlOQy2\nM3vGBOYfxvSGHHlG05DQIgQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "training-app@dogwood-reef-288406.iam.gserviceaccount.com",
+  "client_id": "103731672933983444743",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/training-app%40dogwood-reef-288406.iam.gserviceaccount.com"
+}
